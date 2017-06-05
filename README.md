@@ -1,6 +1,6 @@
 # amaysim/aws
 
-Docker image containing AWS CLI, AWS shell, and some scripts to ease AWS deployments.
+Docker image containing AWS CLI, AWS Shell, and some scripts to ease AWS deployments.
 
 ## Usage
 
