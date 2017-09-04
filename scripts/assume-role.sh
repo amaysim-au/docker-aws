@@ -22,7 +22,7 @@ if [ "$EXPORT" == "yes" ]; then
   echo "export AWS_SECRET_ACCESS_KEY=${KST[1]}"
   echo "export AWS_SESSION_TOKEN=${KST[2]}"
 else
-
+  echo ""
   echo "AWS_ACCESS_KEY_ID=${KST[0]}"
   echo "AWS_SECRET_ACCESS_KEY=${KST[1]}"
   echo "AWS_SESSION_TOKEN=${KST[2]}"
