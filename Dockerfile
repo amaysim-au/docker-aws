@@ -1,8 +1,9 @@
-FROM alpine:3.6
+FROM alpine:3.8
 RUN apk --no-cache update && \
-    apk --no-cache add python py-pip py-setuptools ca-certificates groff less bash make jq gettext-dev curl wget g++ zip git && \
+    apk --no-cache add python py-pip bash coreutils jq ca-certificates && \
     pip --no-cache-dir install aws-shell && \
     update-ca-certificates && \
+    apk del py-pip && \
     rm -rf /var/cache/apk/*
 COPY scripts /opt/scripts
 ENV PATH "$PATH:/opt/scripts"
