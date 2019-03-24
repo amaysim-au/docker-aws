@@ -1,5 +1,5 @@
 VERSION = 1.2.0
-IMAGE_NAME ?= amaysim/aws:$(VERSION)
+IMAGE_NAME ?= dnxsolutions/aws:$(VERSION)
 TAG = $(VERSION)
 
 build:
