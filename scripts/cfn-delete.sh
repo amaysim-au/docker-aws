@@ -1,4 +1,5 @@
 #! /bin/bash
+
 if [ -z "$STACK_NAME" ]; then
 	echo "Need to set STACK_NAME"
 	exit 1

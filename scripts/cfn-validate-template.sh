@@ -1,3 +1,5 @@
+#! /bin/bash
+
 if [ -z "$CFN_FILE" ]; then
 	echo "Need to set CFN_FILE"
 	exit 1
