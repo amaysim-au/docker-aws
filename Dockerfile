@@ -8,6 +8,8 @@ RUN apk --no-cache update && \
     update-ca-certificates && \
     rm -rf /var/cache/apk/*
 
+COPY --from=tbrock/saw:v0.2.2 /bin/saw /bin/saw
+
 COPY scripts /opt/scripts
 
 ENV PATH "$PATH:/opt/scripts"
