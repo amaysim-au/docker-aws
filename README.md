@@ -1,6 +1,6 @@
 # docker-aws
 
-![Security Scan](https://github.com/DNXLabs/docker-aws/workflows/Security%20Scan/badge.svg)
+![Security](https://github.com/DNXLabs/docker-aws/workflows/Security/badge.svg)
 ![Lint](https://github.com/DNXLabs/docker-aws/workflows/Lint/badge.svg)
 
 Docker image containing AWS CLI, AWS Shell, and some scripts to ease AWS deployments.
