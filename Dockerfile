@@ -26,6 +26,8 @@ RUN apk --no-cache update && \
     update-ca-certificates && \
     rm -rf /var/cache/apk/*
 
+RUN pip install boto3==1.12.28
+
 COPY --from=saw /bin/saw /bin/saw
 
 COPY scripts /opt/scripts
