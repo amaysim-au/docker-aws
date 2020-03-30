@@ -1,4 +1,4 @@
-VERSION = 1.16.274
+VERSION = 1.18.31
 IMAGE_NAME ?= amaysim/aws:$(VERSION)
 TAG = $(VERSION)
 
