@@ -17,6 +17,10 @@ KST=(`aws sts assume-role --role-arn "arn:aws:iam::$AWS_ACCOUNT_ID:role/$AWS_ROL
                           --query '[Credentials.AccessKeyId,Credentials.SecretAccessKey,Credentials.SessionToken]' \
                           --output text`)
 
+if [ ${#KST[@]} -eq 0 ]; then
+  exit 1
+fi
+
 if [ "$EXPORT" == "yes" ]; then
   echo ""
   echo "export AWS_ACCESS_KEY_ID=${KST[0]}"
