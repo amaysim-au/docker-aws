@@ -3,6 +3,7 @@ FROM tbrock/saw:v0.2.2 as saw
 
 FROM alpine:3.11
 
+ENV BOTO3_VERSION=1.12.45
 ENV BOTOCORE_VERSION=v2.tar.gz
 ENV AWSCLI_VERSION=2.0.9.tar.gz
 
@@ -23,9 +24,10 @@ RUN apk --no-cache update && \
         g++=9.2.0-r4 \
         zip=3.0-r7 \
         git=2.24.3-r0  && \
-    pip3 --no-cache-dir install --upgrade pip setuptools && \
-    pip3 --no-cache-dir install https://github.com/boto/botocore/archive/$BOTOCORE_VERSION && \
-    pip3 --no-cache-dir install https://github.com/aws/aws-cli/archive/$AWSCLI_VERSION && \
+    pip3 --no-cache-dir install --upgrade pip==20.0.2 setuptools==46.1.3 && \
+    pip3 --no-cache-dir install boto3==$BOTO3_VERSION \
+                                https://github.com/boto/botocore/archive/$BOTOCORE_VERSION \
+                                https://github.com/aws/aws-cli/archive/$AWSCLI_VERSION && \
     update-ca-certificates && \
     rm -rf /var/cache/apk/*
 
