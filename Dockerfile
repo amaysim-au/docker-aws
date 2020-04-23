@@ -21,7 +21,7 @@ RUN apk --no-cache update && \
         g++=9.2.0-r4 \
         zip=3.0-r7 \
         git=2.24.3-r0  && \
-    pip3 --no-cache-dir install --upgrade pip setuptools && \
+    pip3 --no-cache-dir install --upgrade pip==20.0.2 setuptools==46.1.3 && \
     pip3 --no-cache-dir install boto3==$BOTOCORE_VERSION awscli==$AWSCLI_VERSION && \
     update-ca-certificates && \
     rm -rf /var/cache/apk/*
