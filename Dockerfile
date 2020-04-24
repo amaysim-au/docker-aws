@@ -3,7 +3,8 @@ FROM tbrock/saw:v0.2.2 as saw
 
 FROM alpine:3.11
 
-ENV BOTOCORE_VERSION=1.12.44
+ENV BOTOCORE=1.15.44
+ENV BOTO3_VERSION=1.12.44
 ENV AWSCLI_VERSION=1.18.44
 
 RUN apk --no-cache update && \
@@ -22,7 +23,7 @@ RUN apk --no-cache update && \
         zip=3.0-r7 \
         git=2.24.3-r0  && \
     pip3 --no-cache-dir install --upgrade pip==20.0.2 setuptools==46.1.3 && \
-    pip3 --no-cache-dir install boto3==$BOTOCORE_VERSION awscli==$AWSCLI_VERSION && \
+    pip3 --no-cache-dir install botocore==$BOTOCORE boto3==$BOTO3_VERSION awscli==$AWSCLI_VERSION && \
     update-ca-certificates && \
     rm -rf /var/cache/apk/*
 
