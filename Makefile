@@ -1,4 +1,4 @@
-VERSION = 1.18.44
+VERSION = 1.18.79
 IMAGE_NAME ?= dnxsolutions/aws:$(VERSION)
 TAG = $(VERSION)
 
