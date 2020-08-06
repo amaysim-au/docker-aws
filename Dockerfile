@@ -5,7 +5,7 @@ FROM alpine:3.11
 
 ENV BOTO3_VERSION=1.14.2
 ENV BOTOCORE_VERSION=v2.tar.gz
-ENV AWSCLI_VERSION=2.0.22.tar.gz
+ENV AWSCLI_VERSION=2.0.37.tar.gz
 
 RUN apk --no-cache update && \
     apk --no-cache add \
