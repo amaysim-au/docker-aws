@@ -3,6 +3,7 @@
 DURATION="${AWS_ROLE_DURATION:-3600}"
 SESSION_NAME="${AWS_ROLE_SESSION_NAME:-`date +%s`}"
 EXPORT="${EXPORT:-no}"
+CODE_ARTIFACT="${CODE_ARTIFACT:-no}"
 
 # KST=access*K*ey, *S*ecretkey, session*T*oken
 KST=(`aws sts assume-role --role-arn "arn:aws:iam::$AWS_ACCOUNT_ID:role/$AWS_ROLE" \
