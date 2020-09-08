@@ -3,8 +3,8 @@
 #  CODEARTIFACT_AUTH_TOKEN
 
 CODEARTIFACT_AUTH_TOKEN=(`aws codeartifact get-authorization-token \
-                        --domain $DOMAIN  \
-                        --domain-owner $DOMAIN_OWNER \
+                        --domain $CODEARTIFACT_DOMAIN  \
+                        --domain-owner $CODEARTIFACT_DOMAIN_OWNER \
                         --query authorizationToken \
                         --output text`)                          
 if [ "$EXPORT" == "yes" ]; then
