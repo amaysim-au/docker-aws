@@ -5,7 +5,7 @@ FROM alpine:3.11
 
 ENV BOTO3_VERSION=1.14.2
 ENV BOTOCORE_VERSION=v2.tar.gz
-ENV AWSCLI_VERSION=2.0.37.tar.gz
+ENV AWSCLI_VERSION=2.1.6.tar.gz
 
 RUN apk --no-cache update && \
     apk --no-cache add \
@@ -20,8 +20,8 @@ RUN apk --no-cache update && \
         jq=1.6-r0 \
         gettext-dev=0.20.1-r2 \
         wget=1.20.3-r0 \
-        curl=7.67.0-r0 \
-        g++=9.2.0-r4 \
+        curl=7.67.0-r1 \
+        g++=9.3.0-r0 \
         zip=3.0-r7 \
         git=2.24.3-r0  && \
     pip3 --no-cache-dir install --upgrade pip==20.2.1 setuptools==46.1.3 dnxsso==0.5.0 && \
