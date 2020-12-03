@@ -7,6 +7,7 @@ ENV BOTO3_VERSION=1.14.2
 ENV BOTOCORE_VERSION=v2.tar.gz
 ENV AWSCLI_VERSION=2.1.6.tar.gz
 
+
 RUN apk --no-cache update && \
     apk --no-cache add \
         python3-dev=3.8.2-r1 \
