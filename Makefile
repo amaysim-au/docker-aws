@@ -1,4 +1,4 @@
-VERSION = 2.1.7
+VERSION = 2.1.9-dnx1
 IMAGE_NAME ?= dnxsolutions/aws:$(VERSION)
 TAG = $(VERSION)
 
