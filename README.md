@@ -19,6 +19,8 @@ If you want to build and use your own local image
 $ make build
 # go inside the container
 $ make shell
+# run lint check for the image
+$ make lint
 ```
 
 ### Environment Variables
@@ -50,7 +52,9 @@ The Docker image has the following:
 - envsubst: quite useful to create file based on a template using env vars
 
 ## Author
-App managed by DNX Solutions.
+
+Managed by [DNX Solutions](https://github.com/DNXLabs).
 
 ## License
-Apache 2 Licensed. See LICENSE for full details.
+
+Apache 2 Licensed. See [LICENSE](https://github.com/DNXLabs/docker-aws/blob/master/LICENSE) for full details.
