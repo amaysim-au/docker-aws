@@ -9,7 +9,7 @@ CODE_ARTIFACT="${CODE_ARTIFACT:-no}"
 KST=(`aws sts assume-role-with-web-identity --role-arn "arn:aws:iam::$OIDC_AWS_ACCOUNT_ID:role/$OIDC_AWS_ROLE" \
                           --role-session-name "$SESSION_NAME" \
                           --duration-seconds $DURATION \
-                          --web-identity-token $BITBUCKET_STEP_OIDC_TOKEN \
+                          --web-identity-token $OIDC_TOKEN \
                           --query '[Credentials.AccessKeyId,Credentials.SecretAccessKey,Credentials.SessionToken]' \
                           --output text`)
 
