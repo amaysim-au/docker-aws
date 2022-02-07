@@ -2,8 +2,8 @@ FROM tbrock/saw:v0.2.2 as saw
 
 FROM alpine:3.13
 
-ENV BOTO3_VERSION=1.17.73
-ENV AWSCLI_VERSION=1.19.73
+ENV BOTO3_VERSION=1.20.48
+ENV AWSCLI_VERSION=1.22.48
 
 RUN apk --no-cache update && \
     apk --no-cache add \
