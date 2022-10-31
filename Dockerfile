@@ -1,6 +1,6 @@
 FROM tbrock/saw:v0.2.2 as saw
 
-FROM alpine:3.13
+FROM alpine:3.14
 
 ENV BOTO3_VERSION=1.20.48
 ENV AWSCLI_VERSION=1.22.48
